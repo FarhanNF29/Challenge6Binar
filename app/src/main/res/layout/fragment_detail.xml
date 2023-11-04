@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".FragmentDetail">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_menuDetail"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ayam_goreng_detail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_namaMenuDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Nama Menu"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/iv_menuDetail"
+            app:layout_constraintTop_toBottomOf="@id/iv_menuDetail" />
+
+        <TextView
+            android:id="@+id/tv_hargaMenuDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:text="Harga"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/iv_menuDetail"
+            app:layout_constraintTop_toBottomOf="@id/iv_menuDetail" />
+
+        <TextView
+            android:id="@+id/tv_deskripsiMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="16dp"
+            android:text="Deskripsi"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@id/tv_namaMenuDetail"
+            app:layout_constraintTop_toBottomOf="@id/tv_namaMenuDetail" />
+
+        <ImageView
+            android:id="@+id/ic_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/store_tujuan"
+            app:layout_constraintStart_toStartOf="@id/tv_namaMenuDetail"
+            app:layout_constraintTop_toBottomOf="@id/tv_deskripsiMenu" />
+
+        <TextView
+            android:id="@+id/tv_lokasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Lokasi"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ic_store"
+            app:layout_constraintTop_toTopOf="@id/ic_store" />
+
+        <TextView
+            android:id="@+id/tv_lokasiDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="16dp"
+            android:text="Detail Lokasi"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/ic_store"
+            app:layout_constraintStart_toStartOf="@id/tv_lokasi"
+            app:layout_constraintTop_toBottomOf="@id/ic_store" />
+
+        <Button
+            android:id="@+id/btn_tambahKeranjang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:text="Tambah Ke Keranjang"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/ic_store"
+            app:layout_constraintTop_toBottomOf="@id/tv_lokasiDetail"
+            app:layout_constraintVertical_bias="1" />
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="@+id/jumlahAngka"
+            app:layout_constraintStart_toEndOf="@+id/jumlahAngka"
+            app:layout_constraintTop_toTopOf="@+id/jumlahAngka" />
+
+        <TextView
+            android:id="@+id/jumlahAngka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textSize="18sp"
+            android:text="0"
+            app:layout_constraintBottom_toTopOf="@+id/btn_tambahKeranjang"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_minus"
+            app:layout_constraintBottom_toBottomOf="@+id/jumlahAngka"
+            app:layout_constraintEnd_toStartOf="@+id/jumlahAngka"
+            app:layout_constraintTop_toTopOf="@+id/jumlahAngka" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

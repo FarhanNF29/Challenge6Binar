@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="15dp"
+    android:paddingTop="20dp"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_heading1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hai Binarian,"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_heading2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mau makan apa hari ini?"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_heading1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_heading1" />
+
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_account_circle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_shopping_cart"
+            app:layout_constraintEnd_toStartOf="@+id/iv_profile"
+            app:layout_constraintTop_toTopOf="@+id/iv_profile" />
+
+        <ImageView
+            android:id="@+id/iv_banner"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/banner_promo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_heading2" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_nasi"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="32dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/card_mie"
+            app:layout_constraintTop_toTopOf="@+id/card_mie">
+
+            <ImageView
+                android:id="@+id/iv_nasi"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/round_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cat_burger" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_mie"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/iv_banner">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mie" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_snack"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/iv_banner">
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/snack" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_minuman"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="32dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintStart_toEndOf="@+id/card_snack"
+            app:layout_constraintTop_toTopOf="@+id/card_snack">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ice_tea" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_nasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Burger"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/card_nasi"
+            app:layout_constraintStart_toStartOf="@+id/card_nasi"
+            app:layout_constraintTop_toBottomOf="@+id/card_nasi" />
+
+        <TextView
+            android:id="@+id/tv_mie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mie"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/card_mie"
+            app:layout_constraintStart_toStartOf="@+id/card_mie"
+            app:layout_constraintTop_toBottomOf="@+id/card_mie" />
+
+        <TextView
+            android:id="@+id/tv_snack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Snack"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/card_snack"
+            app:layout_constraintStart_toStartOf="@+id/card_snack"
+            app:layout_constraintTop_toBottomOf="@+id/card_snack" />
+
+        <TextView
+            android:id="@+id/tv_minuman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minuman"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/card_minuman"
+            app:layout_constraintStart_toStartOf="@+id/card_minuman"
+            app:layout_constraintTop_toBottomOf="@+id/card_minuman" />
+
+        <TextView
+            android:id="@+id/tv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Menu Makanan"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nasi" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/list_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_menu" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_menu"
+            tools:layout_editor_absoluteX="15dp"
+            tools:listitem="@layout/list_menu_linear" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

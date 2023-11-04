@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "251396279264",
+    "project_id": "challenge5binar-52831",
+    "storage_bucket": "challenge5binar-52831.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251396279264:android:29e1897c2fffea228df985",
+        "android_client_info": {
+          "package_name": "com.example.challenge3binar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4LXgtbd1st2OK1bleWmWeAPc04WD_zqI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

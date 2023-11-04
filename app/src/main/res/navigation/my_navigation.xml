@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.challenge3binar.FragmentHome"
+        android:label="FragmentHome" >
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentDetail"
+            app:destination="@id/fragmentDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetail"
+        android:name="com.example.challenge3binar.FragmentDetail"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_fragmentDetail_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentKeranjang"
+        android:name="com.example.challenge3binar.FragmentKeranjang"
+        android:label="fragment_keranjang"
+        tools:layout="@layout/fragment_keranjang" >
+        <action
+            android:id="@+id/action_fragmentKeranjang_to_fragmentKonfirmasi"
+            app:destination="@id/fragmentKonfirmasi" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProfile2"
+        android:name="com.example.challenge3binar.FragmentProfile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/fragmentKonfirmasi"
+        android:name="com.example.challenge3binar.FragmentKonfirmasi"
+        android:label="fragment_konfirmasi"
+        tools:layout="@layout/fragment_konfirmasi" >
+        <action
+            android:id="@+id/action_fragmentKonfirmasi_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+</navigation>
