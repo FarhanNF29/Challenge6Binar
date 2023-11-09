@@ -18,7 +18,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Keranjang"
+            android:text="@string/keranjang"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintTop_toTopOf="parent"
@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
-            android:text="Ini Harga"
+            android:text="@string/iniHarga"
             app:layout_constraintTop_toBottomOf="@id/textView8"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Total Harga: "
+            android:text="@string/totalHarga"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/tv_totalHargaCart"
@@ -60,7 +60,7 @@
             android:id="@+id/btn_pesanToKonfirmasi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pesan"
+            android:text="@string/pesan"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView8" />
     </androidx.constraintlayout.widget.ConstraintLayout>

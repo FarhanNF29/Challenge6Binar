@@ -3,13 +3,10 @@ package com.example.challenge3binar
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.challenge3binar.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 

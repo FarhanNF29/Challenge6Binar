@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:text="Nama Menu"
+        android:text="@string/namaMenu"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/iv_gambar"
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:text="Harga"
+        android:text="@string/harga"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@id/tv_namaMenu"
         app:layout_constraintTop_toBottomOf="@+id/tv_namaMenu" />

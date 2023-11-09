@@ -20,16 +20,18 @@
             android:scaleType="centerCrop"
             android:src="@drawable/ayam_goreng_detail"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
 
         <TextView
             android:id="@+id/tv_namaMenuDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:text="Nama Menu"
-            android:textSize="16dp"
+            android:text="@string/namaMenu"
+            android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/iv_menuDetail"
             app:layout_constraintTop_toBottomOf="@id/iv_menuDetail" />
@@ -39,9 +41,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginRight="16dp"
-            android:text="Harga"
-            android:textSize="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/harga"
+            android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/iv_menuDetail"
             app:layout_constraintTop_toBottomOf="@id/iv_menuDetail" />
@@ -53,7 +55,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="2dp"
             android:layout_marginRight="16dp"
-            android:text="Deskripsi"
+            android:text="@string/deskripsi"
             android:textStyle="italic"
             app:layout_constraintStart_toStartOf="@id/tv_namaMenuDetail"
             app:layout_constraintTop_toBottomOf="@id/tv_namaMenuDetail" />
@@ -65,14 +67,16 @@
             android:layout_marginTop="32dp"
             android:src="@drawable/store_tujuan"
             app:layout_constraintStart_toStartOf="@id/tv_namaMenuDetail"
-            app:layout_constraintTop_toBottomOf="@id/tv_deskripsiMenu" />
+            app:layout_constraintTop_toBottomOf="@id/tv_deskripsiMenu"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
 
         <TextView
             android:id="@+id/tv_lokasi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Lokasi"
+            android:text="@string/lokasi"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/ic_store"
@@ -85,7 +89,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="2dp"
             android:layout_marginRight="16dp"
-            android:text="Detail Lokasi"
+            android:text="@string/detail_lokasi"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@id/ic_store"
             app:layout_constraintStart_toStartOf="@id/tv_lokasi"
@@ -99,7 +103,7 @@
             android:layout_marginTop="128dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="10dp"
-            android:text="Tambah Ke Keranjang"
+            android:text="@string/tambah_keranjang"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/ic_store"
             app:layout_constraintTop_toBottomOf="@id/tv_lokasiDetail"
@@ -113,7 +117,9 @@
             android:src="@drawable/ic_add"
             app:layout_constraintBottom_toBottomOf="@+id/jumlahAngka"
             app:layout_constraintStart_toEndOf="@+id/jumlahAngka"
-            app:layout_constraintTop_toTopOf="@+id/jumlahAngka" />
+            app:layout_constraintTop_toTopOf="@+id/jumlahAngka"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
 
         <TextView
             android:id="@+id/jumlahAngka"
@@ -121,7 +127,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:textSize="18sp"
-            android:text="0"
+            android:text="@string/angkaNol"
             app:layout_constraintBottom_toTopOf="@+id/btn_tambahKeranjang"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -134,7 +140,9 @@
             android:src="@drawable/ic_minus"
             app:layout_constraintBottom_toBottomOf="@+id/jumlahAngka"
             app:layout_constraintEnd_toStartOf="@+id/jumlahAngka"
-            app:layout_constraintTop_toTopOf="@+id/jumlahAngka" />
+            app:layout_constraintTop_toTopOf="@+id/jumlahAngka"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

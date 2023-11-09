@@ -1,5 +1,79 @@
 <resources>
     <string name="app_name">Challenge3Binar</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <!--
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    -->
+
+    <!-- activity_login.xml -->
+    <string name="login_page">Login Page</string>
+    <string name="email">Email</string>
+    <string name="pass">Password</string>
+    <string name="login">Login</string>
+    <string name="havent_account">Havent an account? Register Here</string>
+
+    <!-- activity_register.xml -->
+    <string name="regist_page">Register Page</string>
+    <string name="username">Username</string>
+    <string name="confirm_pass">Confirm Password</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="already_haveACC">Already have an account?</string>
+
+    <!-- bottom_nav.xml -->
+    <string name="home">Home</string>
+    <string name="keranjang">Keranjang</string>
+    <string name="profil">Profil</string>
+
+    <!-- fragment_detail.xml -->
+    <string name="namaMenu">Nama Menu</string>
+    <string name="harga">Harga</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="lokasi">Lokasi</string>
+    <string name="detail_lokasi">Detail Lokasi</string>
+    <string name="tambah_keranjang">Tambah Ke Keranjang</string>
+    <string name="angkaNol">0</string>
+
+    <!-- fragment_home.xml -->
+    <string name="haiBinar">Hai Binarian,</string>
+    <string name="mauMakan">Mau makan apa hari ini?</string>
+    <string name="burger">Burger</string>
+    <string name="mie">Mie</string>
+    <string name="snack">Snack</string>
+    <string name="minuman">Minuman</string>
+    <string name="menuMakanan">Menu Makanan</string>
+
+    <!-- fragment_keranjang.xml -->
+    <string name="iniHarga">Ini Harga</string>
+    <string name="totalHarga">Total Harga: </string>
+    <string name="pesan">Pesan</string>
+
+    <!-- fragment_konfirmasi.xml -->
+    <string name="konfirmPesan">Konfirmasi Pesanan</string>
+    <string name="metodPengiriman">Metode Pengiriman</string>
+    <string name="ambilSendiri">Ambil Sendiri</string>
+    <string name="dikirim">Dikirim</string>
+    <string name="metodPembayaran">Metode Pembayaran</string>
+    <string name="tunai">Tunai</string>
+    <string name="dompetDigital">Dompet Digital</string>
+    <string name="ringkasanPembayaran">Ringkasan Pembayaran</string>
+    <string name="totalPembayaran">Total Pembayaran</string>
+
+    <!-- fragment_profile.xml -->
+    <string name="profile">Profile</string>
+    <string name="masukanUser">Masukan Username</string>
+    <string name="notFound">FNF NOT FOUND</string>
+    <string name="masukanEmail">Masukan Email</string>
+    <string name="fnf_hotmail">fnfnotfound@hotmail.com</string>
+    <string name="masukanPass">Masukan Pass</string>
+    <string name="angkaPass">010101010</string>
+    <string name="no_telp">No. Telepon</string>
+    <string name="masukanTelp">Masukan Telepon</string>
+    <string name="angkaTelp">01010101010</string>
+    <string name="logOut">LogOut</string>
+
+    <!-- list_keranjang.xml -->
+    <string name="namaMakanan">Nama Makanan</string>
+    <string name="catatan">Catatan :</string>
+    <string name="iniCatatan">Ini Catatan</string>
+
 </resources>

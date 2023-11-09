@@ -18,7 +18,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Profile"
+            android:text="@string/profile"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintTop_toTopOf="parent"
@@ -31,7 +31,9 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_edit"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
 
         <ImageView
             android:id="@+id/iv_profile"
@@ -41,7 +43,9 @@
             android:src="@drawable/hacker_profile"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
 
         <TextView
             android:id="@+id/tv_userName"
@@ -50,7 +54,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:textSize="20sp"
-            android:text="Username"
+            android:text="@string/username"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_profile" />
 
@@ -59,18 +63,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="none"
-            android:hint="Masukan Username"
-            android:text="FNF NOT FOUND"
+            android:hint="@string/masukanUser"
+            android:text="@string/notFound"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="@+id/tv_userName"
-            app:layout_constraintTop_toBottomOf="@+id/tv_userName" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_userName"
+            android:autofillHints="" />
 
         <TextView
             android:id="@+id/tv_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Email"
+            android:text="@string/email"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/et_userName"
             app:layout_constraintTop_toBottomOf="@+id/et_userName" />
@@ -79,19 +84,20 @@
             android:id="@+id/et_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Masukan Email"
-            android:text="fnfnotfound@hotmail.com"
+            android:hint="@string/masukanEmail"
+            android:text="@string/fnf_hotmail"
             android:inputType="none"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="@+id/tv_password"
-            app:layout_constraintTop_toBottomOf="@+id/tv_password" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_password"
+            android:autofillHints="" />
 
         <TextView
             android:id="@+id/tv_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Password"
+            android:text="@string/pass"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/et_email"
             app:layout_constraintTop_toBottomOf="@+id/et_email" />
@@ -100,19 +106,20 @@
             android:id="@+id/et_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Masukan Password"
+            android:hint="@string/masukanPass"
             android:inputType="textPassword"
-            android:text="010101010"
+            android:text="@string/angkaPass"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="@+id/tv_email"
-            app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_email"
+            android:autofillHints="" />
 
         <TextView
             android:id="@+id/tv_telepon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="No. Telepon"
+            android:text="@string/no_telp"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/et_password"
             app:layout_constraintTop_toBottomOf="@+id/et_password" />
@@ -123,17 +130,18 @@
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:textSize="24sp"
-            android:hint="Masukan Telepon"
-            android:text="01010101010"
+            android:hint="@string/masukanTelp"
+            android:text="@string/angkaTelp"
             app:layout_constraintStart_toStartOf="@+id/tv_telepon"
-            app:layout_constraintTop_toBottomOf="@+id/tv_telepon" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_telepon"
+            android:autofillHints="" />
 
         <Button
             android:id="@+id/btn_logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="LogOut"
+            android:text="@string/logOut"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />

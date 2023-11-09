@@ -12,7 +12,9 @@
         android:layout_height="130dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/ayam_kfc" />
+        android:src="@drawable/ayam_kfc"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
 
     <TextView
         android:id="@+id/tv_namaMenu"
@@ -20,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="2dp"
-        android:text="Nama Makanan"
+        android:text="@string/namaMakanan"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/iv_gambarMenu"
@@ -31,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:text="Harga"
+        android:text="@string/harga"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/tv_namaMenu"
         app:layout_constraintTop_toBottomOf="@+id/tv_namaMenu" />
@@ -43,14 +45,16 @@
         android:layout_marginTop="2dp"
         android:src="@drawable/ic_delete"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
 
     <TextView
         android:id="@+id/tv_jumlahMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
-        android:text="0"
+        android:text="@string/angkaNol"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/iv_add2"
         app:layout_constraintEnd_toStartOf="@+id/iv_add2"
@@ -63,7 +67,9 @@
         android:layout_marginTop="64dp"
         android:src="@drawable/ic_add"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_delete" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_delete"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
 
     <ImageView
         android:id="@+id/iv_min"
@@ -73,13 +79,15 @@
         android:src="@drawable/ic_minus"
         app:layout_constraintBottom_toBottomOf="@+id/iv_add2"
         app:layout_constraintEnd_toStartOf="@+id/tv_jumlahMenu"
-        app:layout_constraintTop_toTopOf="@+id/iv_add2" />
+        app:layout_constraintTop_toTopOf="@+id/iv_add2"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Catatan :"
+        android:text="@string/catatan"
         android:textStyle="bold"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,7 +99,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:text="Ini catatan"
+        android:text="@string/iniCatatan"
         app:layout_constraintEnd_toEndOf="@+id/textView6"
         app:layout_constraintStart_toStartOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />

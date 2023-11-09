@@ -1,17 +1,15 @@
 package com.example.challenge3binar
 
 import android.content.pm.PackageManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.challenge3binar.databinding.ActivityMainBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

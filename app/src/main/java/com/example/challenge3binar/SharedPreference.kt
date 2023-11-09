@@ -3,8 +3,6 @@ package com.example.challenge3binar
 
 import android.content.Context
 import androidx.core.content.edit
-import android.content.Context.MODE_PRIVATE
-
 
 
 class SharedPreference(context: Context) {

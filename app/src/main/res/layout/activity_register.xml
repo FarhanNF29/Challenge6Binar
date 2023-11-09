@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Register Page"
+        android:text="@string/regist_page"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +31,7 @@
             android:id="@+id/et_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username" />
+            android:hint="@string/username" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -46,7 +46,7 @@
             android:id="@+id/et_email_reg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="@string/email"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,7 +63,7 @@
             android:id="@+id/et_password_reg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="@string/pass"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -80,7 +80,7 @@
             android:id="@+id/et_confirmpassword_reg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Confirm Password"
+            android:hint="@string/confirm_pass"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,7 +89,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="SIGN UP"
+        android:text="@string/sign_up"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/til_confirmpassword" />
@@ -99,7 +99,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Already have an account?"
+        android:text="@string/already_haveACC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_regist" />

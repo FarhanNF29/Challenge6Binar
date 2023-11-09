@@ -6,17 +6,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:icon="@drawable/baseline_home_24"
-        android:title="Home" />
+        android:title="@string/home" />
     <item
         android:id="@+id/fragmentKeranjang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:icon="@drawable/baseline_shopping_cart_24"
-        android:title="Keranjang" />
+        android:title="@string/keranjang" />
     <item
         android:id="@+id/fragmentProfile2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:icon="@drawable/baseline_account_circle_24"
-        android:title="Profil" />
+        android:title="@string/profil" />
 </menu>

@@ -27,7 +27,6 @@ data class DataCart(
     var isDeleted: Boolean = false
 ) {
     companion object {
-        const val TABLE_NAME = "simple_chart_table"
     }
 }
 
