@@ -1,4 +1,4 @@
-package com.example.challenge3binar
+package com.example.challenge3binar.viewModel.fragmentDetail
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

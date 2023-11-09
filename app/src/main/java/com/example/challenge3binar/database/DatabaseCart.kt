@@ -1,9 +1,12 @@
-package com.example.challenge3binar
+package com.example.challenge3binar.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.challenge3binar.cart.DataCart
+import com.example.challenge3binar.order.OrderDao
+import com.example.challenge3binar.order.OrderData
 
 @Database(entities = [DataCart::class, OrderData::class], version = 2, exportSchema = false)
 abstract class DatabaseCart : RoomDatabase() {

@@ -1,4 +1,4 @@
-package com.example.challenge3binar
+package com.example.challenge3binar.viewModel.fragmentHome
 
 import android.os.Bundle
 import android.util.Log
@@ -7,11 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.challenge3binar.R
 import com.example.challenge3binar.databinding.FragmentHomeBinding
 import com.example.challenge3binar.network.model.product.ProductItemResponse
+import com.example.challenge3binar.repository.RepositoryMenu
+import com.example.challenge3binar.repository.ViewModelFactory
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -77,6 +81,11 @@ class FragmentHome : Fragment() {
         Log.e("IS_GRID", isGrid.toString())
         Log.e("IS_GRID_SHAREDPREF", sharedPreferences.isGrid.toString())
         setupActionChangeLayout()
+
+        val repositroyMenu = RepositoryMenu()
+        val viewModelFactory = ViewModelFactory(repositroyMenu)
+        val viewModel = ViewModelProvider(this,viewModelFactory).get(ViewModelFragmentHome::class.java)
+
 
         viewModel.getListProduct()
 

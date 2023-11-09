@@ -1,4 +1,4 @@
-package com.example.challenge3binar
+package com.example.challenge3binar.main
 
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -9,6 +9,7 @@ import androidx.core.app.ActivityCompat
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.example.challenge3binar.R
 import com.example.challenge3binar.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

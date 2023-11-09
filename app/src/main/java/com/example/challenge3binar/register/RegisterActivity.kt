@@ -1,4 +1,4 @@
-package com.example.challenge3binar
+package com.example.challenge3binar.register
 
 import android.content.Context
 import android.content.Intent
@@ -7,6 +7,7 @@ import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.challenge3binar.databinding.ActivityRegisterBinding
+import com.example.challenge3binar.login.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class RegisterActivity : AppCompatActivity() {

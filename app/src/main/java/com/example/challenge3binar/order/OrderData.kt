@@ -1,4 +1,4 @@
-package com.example.challenge3binar
+package com.example.challenge3binar.order
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

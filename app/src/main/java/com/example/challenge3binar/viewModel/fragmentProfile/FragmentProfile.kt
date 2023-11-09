@@ -1,4 +1,4 @@
-package com.example.challenge3binar
+package com.example.challenge3binar.viewModel.fragmentProfile
 
 import android.content.Context
 import android.content.Intent
@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.challenge3binar.databinding.FragmentProfileBinding
+import com.example.challenge3binar.login.LoginActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

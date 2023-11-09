@@ -1,4 +1,4 @@
-package com.example.challenge3binar
+package com.example.challenge3binar.viewModel.fragmentDetail
 
 import android.content.Intent
 import android.net.Uri
@@ -15,6 +15,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
+import com.example.challenge3binar.R
+import com.example.challenge3binar.cart.DataCart
+import com.example.challenge3binar.database.DatabaseCart
 import com.example.challenge3binar.databinding.FragmentDetailBinding
 import com.example.challenge3binar.network.model.product.ProductItemResponse
 

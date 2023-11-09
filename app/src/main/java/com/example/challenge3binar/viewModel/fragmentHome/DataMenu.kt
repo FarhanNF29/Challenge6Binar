@@ -1,4 +1,4 @@
-package com.example.challenge3binar
+package com.example.challenge3binar.viewModel.fragmentHome
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

@@ -7,7 +7,7 @@
     android:paddingHorizontal="8dp"
     android:paddingTop="16dp"
     android:fillViewport="true"
-    tools:context=".FragmentKonfirmasi">
+    tools:context=".viewModel.fragmentKonfirmasi.FragmentKonfirmasi">
 
     <!-- TODO: Update blank fragment layout -->
     <androidx.constraintlayout.widget.ConstraintLayout

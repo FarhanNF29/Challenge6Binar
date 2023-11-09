@@ -1,4 +1,4 @@
-package com.example.challenge3binar
+package com.example.challenge3binar.cart
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,8 +8,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.challenge3binar.database.CartDao
+import com.example.challenge3binar.R
 
-class DataCartAdapter(private val context: Context, private val dataCartDao: CartDao ) : RecyclerView.Adapter<DataCartAdapter.DataCartViewHolder>() {
+class DataCartAdapter(private val context: Context, private val dataCartDao: CartDao) : RecyclerView.Adapter<DataCartAdapter.DataCartViewHolder>() {
     private var dataCartList: List<DataCart> = emptyList()
 
     inner class DataCartViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
