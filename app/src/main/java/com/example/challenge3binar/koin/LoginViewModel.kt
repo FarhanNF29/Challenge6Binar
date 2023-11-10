@@ -1,6 +1,5 @@
 package com.example.challenge3binar.koin
 
-// File: LoginViewModel.kt
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

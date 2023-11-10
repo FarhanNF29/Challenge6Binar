@@ -1,6 +1,5 @@
 package com.example.challenge3binar.koin
 
-// File: MyApplication.kt
 
 import android.app.Application
 import org.koin.android.ext.koin.androidContext

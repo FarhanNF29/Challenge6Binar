@@ -1,6 +1,5 @@
 package com.example.challenge3binar.koin
 
-// File: AppModule.kt
 
 import android.content.Context
 import android.content.SharedPreferences

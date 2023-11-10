@@ -1,6 +1,5 @@
 package com.example.challenge3binar.register
 
-// RegisterActivity.kt
 
 import android.content.Intent
 import android.os.Bundle
