@@ -89,4 +89,11 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
+    //Koin
+    implementation ("io.insert-koin:koin-core:3.2.2")
+    implementation ("io.insert-koin:koin-android:3.3.0")
+    implementation ("io.insert-koin:koin-android-compat:3.3.0")
+    implementation ("io.insert-koin:koin-androidx-workmanager:3.3.0")
+    implementation ("io.insert-koin:koin-androidx-navigation:3.3.0")
+
 }

@@ -1,33 +1,30 @@
 package com.example.challenge3binar.register
 
-import android.content.Context
+// RegisterActivity.kt
+
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.challenge3binar.databinding.ActivityRegisterBinding
+import com.example.challenge3binar.koin.RegisterViewModel
 import com.example.challenge3binar.login.LoginActivity
-import com.google.firebase.auth.FirebaseAuth
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class RegisterActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityRegisterBinding
-
-    // create Firebase authentication object
-    lateinit var auth: FirebaseAuth
+    private lateinit var binding: ActivityRegisterBinding
+    private val viewModel: RegisterViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivityRegisterBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
+        binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        auth = FirebaseAuth.getInstance()
 
         binding.tvRegToLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
-
         }
 
         binding.btnRegist.setOnClickListener {
@@ -35,6 +32,7 @@ class RegisterActivity : AppCompatActivity() {
             val name = binding.etUsername.text.toString()
             val password = binding.etPasswordReg.text.toString()
             val confirmPass = binding.etConfirmpasswordReg.text.toString()
+
 
             //Validasi Nama
             if(name.isEmpty()) {
@@ -85,28 +83,23 @@ class RegisterActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            RegisterFirebase(email, password, name)
+            viewModel.register(email, password, name, this)
         }
+
+        observeViewModel()
     }
 
-    private fun RegisterFirebase(email: String, password: String, name: String) {
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) {
-                if (it.isSuccessful) {
-                    // Simpan data registrasi ke Shared Preferences
-                    val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-                    val editor = sharedPreferences.edit()
-                    editor.putString("username", name)
-                    editor.putString("email", email)
-                    editor.putString("password", password)
-                    editor.apply()
-
-                    Toast.makeText(this, "Register Berhasil", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, LoginActivity::class.java)
-                    startActivity(intent)
-                } else {
-                    Toast.makeText(this, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
-                }
+    private fun observeViewModel() {
+        viewModel.registrationResult.observe(this) { success ->
+            if (success) {
+                Toast.makeText(this, "Registrasi berhasil", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
             }
+        }
+
+        viewModel.errorMessage.observe(this) { message ->
+            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+        }
     }
 }

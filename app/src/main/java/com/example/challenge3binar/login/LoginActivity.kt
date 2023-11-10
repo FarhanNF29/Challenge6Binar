@@ -1,36 +1,32 @@
 package com.example.challenge3binar.login
 
-import android.content.Context
+// File: LoginActivity.kt
+
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.challenge3binar.databinding.ActivityLoginBinding
+import com.example.challenge3binar.koin.LoginViewModel
 import com.example.challenge3binar.main.MainActivity
 import com.example.challenge3binar.register.RegisterActivity
-import com.example.challenge3binar.databinding.ActivityLoginBinding
-import com.google.firebase.auth.FirebaseAuth
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LoginActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityLoginBinding
+    private val loginViewModel: LoginViewModel by viewModel()
 
-    // Creating firebaseAuth object
-    lateinit var auth: FirebaseAuth
-
-    // Shared Preferences Object
-    lateinit var sharedPreferences: SharedPreferences
+    private val binding: ActivityLoginBinding by lazy {
+        ActivityLoginBinding.inflate(layoutInflater)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivityLoginBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        auth = FirebaseAuth.getInstance()
-        sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-
         // Check if the user is already logged in
+        val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
         if (sharedPreferences.getBoolean("isLoggedIn", false)) {
             navigateToMainActivity()
             return
@@ -45,43 +41,37 @@ class LoginActivity : AppCompatActivity() {
             val email = binding.etEmailLog.text.toString()
             val password = binding.etPasswordLog.text.toString()
 
-            if (email.isEmpty()) {
-                binding.etEmailLog.error = "Email Harus Diisi"
-                binding.etEmailLog.requestFocus()
+            if (email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches() || password.isEmpty()) {
+                Toast.makeText(this, "Email dan Password harus diisi dengan benar", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                binding.etEmailLog.error = "Email Tidak Valid"
-                binding.etEmailLog.requestFocus()
-                return@setOnClickListener
-            }
-
-            if (password.isEmpty()) {
-                binding.etPasswordLog.error = "Password Harus Diisi"
-                binding.etPasswordLog.requestFocus()
-                return@setOnClickListener
-            }
-
-            LoginFirebase(email, password)
+            // Menggunakan ViewModel dengan Koin DI
+            loginViewModel.login(email, password)
         }
+
+        observeViewModel()
     }
 
-    private fun LoginFirebase(email: String, password: String) {
-        auth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) {
-                if (it.isSuccessful) {
+    private fun observeViewModel() {
+        // Observing ViewModel state
+        loginViewModel.loginState.observe(this) { state ->
+            when (state) {
+                is LoginViewModel.LoginState.Success -> {
                     // Save the login status in Shared Preferences
-                    val editor = sharedPreferences.edit()
+                    val editor = getSharedPreferences("MyPrefs", MODE_PRIVATE).edit()
                     editor.putBoolean("isLoggedIn", true)
                     editor.apply()
 
-                    Toast.makeText(this, "Selamat datang $email", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Selamat datang ${state.email}", Toast.LENGTH_SHORT).show()
                     navigateToMainActivity()
-                } else {
-                    Toast.makeText(this, "Maaf Akun Anda Belum Terdaftar", Toast.LENGTH_SHORT).show()
                 }
+                is LoginViewModel.LoginState.Failure -> {
+                    Toast.makeText(this, "Maaf, akun Anda belum terdaftar", Toast.LENGTH_SHORT).show()
+                }
+                // Handle other states if needed
             }
+        }
     }
 
     private fun navigateToMainActivity() {
